@@ -21,7 +21,7 @@ The ESP32 hosts a local Wi-Fi access point and provides a control webpage that c
 - Old Toy RC Car chassis
 - MX1508 Motor Driver – dual H-bridge for motor control
 - 2 × 3V DC Motors – one for drive, one for steering
-- 4 × AA NiMH batteries – to power the motors
+- 4 × AA Alkaline batteries – to power the motors
 - Buck Converter (MP1584) – step down battery voltage to 3.3V for ESP32
 - Jumper wires, solder, electrical tape
 - (Optional) 4 × AAA batteries (initially used separately for ESP32)
@@ -33,15 +33,14 @@ The ESP32 hosts a local Wi-Fi access point and provides a control webpage that c
 - Both motors and ESP32 powered from 4 × AA alkaline batteries → **ESP32 kept resetting** due to voltage sag.  
 
 ### Experiments
-- Tried separate 4 × AAA pack for ESP32.  
-- Still unstable until a **common ground** was established.  
+- Tried separate 4 × AAA pack for ESP32.   
 - Added **buck converter** for stable regulated 3.3V.  
 
 ### Final Setup
-- Motors powered by 4 × NiMH AA batteries.  
+- Motors powered by 4 × Alkaline AA batteries.  
 - ESP32 powered via buck converter at 3.3V.  
 - All grounds tied together.  
-- ✅ Stable operation, no resets.  
+- ✅ Stable operation, some resets.  
 
 > **Lesson:** ESP32 is highly sensitive to voltage drops. Always ensure regulated supply and proper grounding.
 
@@ -53,7 +52,7 @@ The ESP32 hosts a local Wi-Fi access point and provides a control webpage that c
   - IN2 → GPIO 27  
   - IN3 → GPIO 25  
   - IN4 → GPIO 33  
-- Motor Driver VCC → 4 × AA NiMH battery pack (+)  
+- Motor Driver VCC → 4 × AA Alkaline battery pack (+)  
 - Buck Converter  
   - IN+ → Battery VCC  
   - IN– → Battery GND  
@@ -90,7 +89,7 @@ The ESP32 hosts a local Wi-Fi access point and provides a control webpage that c
 ## 🛠️ Challenges & Solutions
 | Challenge | Cause | Solution |
 |-----------|-------|----------|
-| ESP32 kept resetting | Voltage sag due to motor load | Used NiMH batteries + buck converter |
+| ESP32 kept resetting | Voltage sag due to motor load | Used additional 4 x AAA batteries|
 | Loose wires | Long jumper wires | Soldered connections, secured with tape |
 | Steering inverted | Wrong pin mapping | Swapped IN1/IN2 |
 | Car not moving at low PWM | Motors need torque to start | Set minimum speed ~50% |
@@ -109,7 +108,7 @@ The ESP32 hosts a local Wi-Fi access point and provides a control webpage that c
 - **Buck Converter:** best choice (stable 3.3V).  
 - **AMS1117 regulator:** simple but wastes power as heat.  
 - **Direct AAA supply:** unstable until common ground added.  
-- ✅ Buck converter + NiMH cells = most stable.  
+- ✅ Buck converter + 4 x AA cells + 4 x AAA cells = most stable.  
 
 ### 3. Battery Chemistry
 - **Alkaline AA:** voltage sag under load.  
@@ -131,7 +130,7 @@ The ESP32 hosts a local Wi-Fi access point and provides a control webpage that c
 ## 🚀 Future Improvements
 - Add ultrasonic sensor for obstacle avoidance.  
 - Stream video using ESP32-CAM.  
-- Implement PID for smoother steering and drive control.  
+- 4 x AA Ni-Mh Batteries.  
 
 ---
 
