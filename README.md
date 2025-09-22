@@ -124,7 +124,7 @@ The ESP32 hosts a local Wi-Fi access point and provides a control webpage that c
 ---
 
 ## 📷 Demo
-(Add photos or video link here, e.g. YouTube demo)  
+![Image Alt](https://github.com/friendlyflame/esp32-rc-car/blob/06cc3d6c3b4a37498c5fda434adeef7fdd41e54e/esp32_car.jpeg)
 
 ---
 
