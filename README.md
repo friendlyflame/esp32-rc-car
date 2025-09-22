@@ -37,7 +37,7 @@ The ESP32 hosts a local Wi-Fi access point and provides a control webpage that c
 - Added **buck converter** for stable regulated 3.3V.  
 
 ### Final Setup
-- Motors powered by 4 × Alkaline AA batteries.  
+- Motors powered by 4 × Alkaline AA batteries + 4 x AAA batteries.  
 - ESP32 powered via buck converter at 3.3V.  
 - All grounds tied together.  
 - ✅ Stable operation, some resets.  
