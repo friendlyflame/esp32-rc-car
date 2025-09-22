@@ -24,7 +24,7 @@ The ESP32 hosts a local Wi-Fi access point and provides a control webpage that c
 - 4 × AA Alkaline batteries – to power the motors
 - Buck Converter (MP1584) – step down battery voltage to 3.3V for ESP32
 - Jumper wires, solder, electrical tape
-- (Optional) 4 × AAA batteries (initially used separately for ESP32)
+- (Optional) 4 × AAA batteries (initially used separately for ESP32, to solve wifi resets)
 
 ---
 
@@ -34,15 +34,14 @@ The ESP32 hosts a local Wi-Fi access point and provides a control webpage that c
 
 ### Experiments
 - Tried separate 4 × AAA pack for ESP32.   
-- Added **buck converter** for stable regulated 3.3V.  
 
 ### Final Setup
-- Motors powered by 4 × Alkaline AA batteries + 4 x AAA batteries.  
+- Motors powered by 4 × Alkaline AA batteries.  
 - ESP32 powered via buck converter at 3.3V.  
 - All grounds tied together.  
 - ✅ Stable operation, some resets.  
 
-> **Lesson:** ESP32 is highly sensitive to voltage drops. Always ensure regulated supply and proper grounding.
+> **Lesson:** ESP32 is highly sensitive to voltage drops. Always ensure regulated supply and proper grounding, runtime of the car is less.
 
 ---
 
@@ -108,7 +107,7 @@ The ESP32 hosts a local Wi-Fi access point and provides a control webpage that c
 - **Buck Converter:** best choice (stable 3.3V).  
 - **AMS1117 regulator:** simple but wastes power as heat.  
 - **Direct AAA supply:** unstable until common ground added.  
-- ✅ Buck converter + 4 x AA cells + 4 x AAA cells = most stable.  
+- ✅ Buck converter + 4 x AA cells + 4 x AAA cells = most stable(but Ni-Mh & Li-ion batteries preferable).  
 
 ### 3. Battery Chemistry
 - **Alkaline AA:** voltage sag under load.  
