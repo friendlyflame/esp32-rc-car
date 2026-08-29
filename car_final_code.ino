@@ -93,12 +93,12 @@ void stopAll() {
 
 // Swapped left/right directions
 void steerLeft() {
-  ledcWrite(CH_IN1, 0);
-  ledcWrite(CH_IN2, steerSpeed);
-}
-void steerRight() {
   ledcWrite(CH_IN1, steerSpeed);
   ledcWrite(CH_IN2, 0);
+}
+void steerRight() {
+  ledcWrite(CH_IN1, 0);
+  ledcWrite(CH_IN2, steerSpeed);
 }
 
 void driveForward() {
