@@ -24,6 +24,9 @@ WebServer server(80);
 int driveSpeed = 128;    // Forward/Reverse default 50%
 int steerSpeed = 255;    // Left/Right default ~100%
 
+// Prevent stalling at very low PWM
+const int MIN_DUTY = 50;
+
 // Mobile web UI
 const char* htmlPage = R"rawliteral(
 <!DOCTYPE html>
