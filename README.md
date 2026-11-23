@@ -47,8 +47,8 @@ The ESP32 hosts a local Wi-Fi access point and provides a control webpage that c
 
 ## 🔌 Wiring Connections
 - ESP32 → MX1508 Motor Driver  
-  - IN1 → GPIO 26  
-  - IN2 → GPIO 27  
+  - IN1 → GPIO 27  
+  - IN2 → GPIO 26  
   - IN3 → GPIO 25  
   - IN4 → GPIO 33  
 - Motor Driver VCC → 4 × AA Alkaline battery pack (+)  
